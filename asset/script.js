@@ -75,16 +75,20 @@ $('.bounce2').click(function() {
 })
 
 var i = 0;
-var txt = "im sorry if this took so long but thanks for staying talaga and thank you for always understanding me, right now po it's different na talaga and im gonna commit na, I'll stay by your side, I'll be your bestfriend, your lover, your companion, through ups and downs poo, I'll be there for youuu,           I Love You!";
+var txt = "im sorry if this took so long but thanks for staying talaga and thank you for always understanding me, right now po it's different na talaga and im gonna commit na, I'll stay by your side, I'll be your bestfriend, your lover, your companion, through ups and downs poo, I'll be there for youuu,\nI Love You!";
 var speed = 125;
 
 function runText() {
     if (i < txt.length) {
-        document.getElementById("dynamic-text").innerHTML += txt.charAt(i);
+        if (txt.charAt(i) === "\n") {
+            document.getElementById("dynamic-text").innerHTML += "<br>"; // Convert \n to <br>
+        } else {
+            document.getElementById("dynamic-text").innerHTML += txt.charAt(i);
+        }
         i++;
         setTimeout(runText, speed);
     }
-};
+}
 
 function playMusic() {
     var music = document.getElementById("music");
