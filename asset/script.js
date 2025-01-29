@@ -80,11 +80,7 @@ var speed = 125;
 
 function runText() {
     if (i < txt.length) {
-        if (txt.charAt(i) === "\n") {
-            document.getElementById("dynamic-text").innerHTML += "<br>"; // Convert \n to <br>
-        } else {
-            document.getElementById("dynamic-text").innerHTML += txt.charAt(i);
-        }
+        document.getElementById("dynamic-text").innerText += txt.charAt(i);
         i++;
         setTimeout(runText, speed);
     }
