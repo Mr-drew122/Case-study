@@ -63,7 +63,11 @@
 
 .center2 span {
     font-weight: bold;
-    font-family: ''Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#dynamic-text {
+    white-space: pre-line;
 }
 
 .gif {
