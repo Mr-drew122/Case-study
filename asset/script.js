@@ -80,11 +80,11 @@ var speed = 125;
 
 function runText() {
     if (i < txt.length) {
-        document.getElementById("dynamic-text").innerText += txt.charAt(i);
+        document.getElementById("dynamic-text").innerHTML += txt.charAt(i);
         i++;
         setTimeout(runText, speed);
     }
-}
+};
 
 function playMusic() {
     var music = document.getElementById("music");
