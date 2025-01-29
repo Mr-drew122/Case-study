@@ -64,6 +64,7 @@
 .center2 span {
     font-weight: bold;
     font-family: 'Quicksand', sans-serif;
+    white-space: pre-line;
 }
 
 .gif {
