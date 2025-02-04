@@ -108,6 +108,13 @@
       "./asset/image7.gif"
     ];
 
+    function preloadImages(paths) {
+        paths.forEach(path) => { 
+            const img = new Image();
+            img.src = path;
+        });
+    }
+
     noButton.addEventListener('click', function() {
       if (noClickCount < 10) {
         noClickCount++;
